@@ -2,9 +2,9 @@ type Bond @entity {
   id: ID!
   name: String! 
   symbol: String!
-  maturity: Int!
-  amount: Int!
-  paymentToken:
+  maturity: BigInt!
+  amount: BigInt!
+  paymentToken: Token
   dao: Dao
 }
 

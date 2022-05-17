@@ -1,0 +1,19 @@
+{
+  "name": "ethglobal-dao-lend-subgraph",
+  "license": "UNLICENSED",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ vfei/ethglobal-dao-lend-subgraph",
+    "create-local": "graph create --node http://localhost:8020/ vfei/ethglobal-dao-lend-subgraph",
+    "remove-local": "graph remove --node http://localhost:8020/ vfei/ethglobal-dao-lend-subgraph",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 vfei/ethglobal-dao-lend-subgraph"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.29.0",
+    "@graphprotocol/graph-ts": "0.26.0"
+  },
+  "devDependencies": {
+    "matchstick-as": "^0.4.3"
+  }
+}

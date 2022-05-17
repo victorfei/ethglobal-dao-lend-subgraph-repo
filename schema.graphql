@@ -1,0 +1,20 @@
+type Bond @entity {
+  id: ID!
+  name: String! 
+  symbol: String!
+  maturity: Int!
+  amount: Int!
+  paymentToken:
+  dao: Dao
+}
+
+type Dao @entity {
+  id: ID!
+  name: String!
+}
+
+type Token @entity {
+  id: ID!
+  name: String
+  symbol: String
+}

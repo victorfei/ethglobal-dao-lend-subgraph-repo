@@ -21,3 +21,19 @@ dataSources:
         - event: BondCreated(address,string,string,indexed address,uint256,indexed address,indexed address,uint256,uint256,uint256)
           handler: handleBondCreated
       file: ./src/mapping.ts
+templates:
+  - kind: ethereum
+    name: Bond
+    network: kovan
+    source:
+      abi: Bond
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - Bond
+      abis:
+        - name: Bond
+          file: ./abis/Bond.json
+      file: ./src/mapping.ts

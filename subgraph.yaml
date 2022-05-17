@@ -8,6 +8,7 @@ dataSources:
     source:
       address: "0x5e6455b99a9B7FEFacf4225466158dA7cf2f554e"
       abi: BondFactory
+      startBlock: 31570060
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5

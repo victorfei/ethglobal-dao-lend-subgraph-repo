@@ -1,5 +1,5 @@
 {
-  "name": "ethglobal-dao-lend-subgraph",
+  "name": "ethglobal-dao-lend-subgraph-repo",
   "license": "UNLICENSED",
   "scripts": {
     "codegen": "graph codegen",

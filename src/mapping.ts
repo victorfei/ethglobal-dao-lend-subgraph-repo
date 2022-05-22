@@ -8,14 +8,15 @@ export function handleBondCreated(event: BondCreated): void {
   bond.amount = event.params.bonds;
   bond.maturity = event.params.maturity;
 
-  // Check if the dao exists already
+  // Check and populate dao
   let dao = Dao.load(event.params.owner.toHexString());
   if (!dao) {
     dao = new Dao(event.params.owner.toHexString());
   }
-  dao.name = 'Something Dao'; // TODO we need to add to the BondCreated event to get this
+  dao.name = event.params.name;
   bond.dao = dao.id;
   
+  // Check and populate paymentToken
   let paymentToken = Token.load(event.params.owner.toHexString());
   if (!paymentToken) {
     paymentToken = new Token(event.params.owner.toHexString());

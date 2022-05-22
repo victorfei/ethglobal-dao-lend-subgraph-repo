@@ -6,9 +6,9 @@ dataSources:
     name: BondFactory
     network: kovan
     source:
-      address: "0x5e6455b99a9B7FEFacf4225466158dA7cf2f554e"
+      address: "0xeCF51812d699B75EC85C554789B064B994419440"
       abi: BondFactory
-      startBlock: 31570060
+      startBlock: 31747720
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
@@ -19,7 +19,7 @@ dataSources:
         - name: BondFactory
           file: ./abis/BondFactory.json
       eventHandlers:
-        - event: BondCreated(address,string,string,indexed address,uint256,indexed address,indexed address,uint256,uint256,uint256)
+        - event: BondCreated(address,string,string,indexed address,uint256,indexed address,uint256)
           handler: handleBondCreated
       file: ./src/mapping.ts
 templates:
